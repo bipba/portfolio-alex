@@ -1,0 +1,97 @@
+.home{
+
+    .homeContent{
+        background: linear-gradient(125deg, $color-1 30%, transparent 50%);
+        min-height: $minHeight;
+        width: 100%;
+        min-height: 500px;
+        border-radius: $borderRaduis;
+        position: relative;
+        overflow: hidden;
+
+        &:after{
+            content: '';
+            position: absolute;
+            height: 100%;
+            width: inherit;
+            background: url('../../../public/media/IMG_project5.jpg') center/cover;
+            object-fit: contain;
+            z-index: -1;
+            filter: brightness(120%);
+        }
+
+        .content{
+            position: absolute;
+            top: 20%;
+            left: 13%;
+            font-family: $font-1;
+      
+        h1{
+            font-size: 4.4rem;
+            font-family: $font-3;
+            color: $color-5;
+            text-transform: uppercase;
+            text-shadow: 3px 6px 2px $black;
+        }
+        h2{
+            font-size: 2.5rem;
+            padding: 1.5rem 0 7rem;
+            color: $color-5;
+            text-shadow: 1px 4px 1px $black;
+        }
+        .pdf{
+            a{
+                font-size: 1.5rem;
+                padding: 1rem 2rem;
+                background: $color-5;       
+                border-radius: $borderRaduis;
+                box-shadow: 0 5px 1px rgb(15, 15, 15);
+                transition: .2s ease;
+
+            &:hover{
+                background: yellow;
+                color: $color-0;
+            }
+        }  
+       }
+    }
+}
+}
+@media screen and (max-width: 850px){
+    .homeContent{
+        min-height: 75vh !important;
+        &:after{
+            background: url('../../../public/media/IMG_project5.jpg')no-repeat  60% 
+            100%/cover !important;
+        }
+        h1{
+            font-size: 3rem !important;
+        }
+        h2 {
+            font-size: 1.8rem !important;
+        }
+    }
+}
+@media screen and (max-width: 580px){
+    .homeContent{
+        min-height: 75vh !important;
+        &:after{
+            background: url('../../../public/media/IMG_project5.jpg')no-repeat  60% 
+            50%/cover !important;
+        }
+        h1{
+            font-size: 2rem !important;
+        }
+        h2 {
+            font-size: 1.4rem !important;
+        }
+        .pdf{ a{
+            transform: translateX(-55px);
+        }}
+    }
+
+}
+@media screen and (max-width: 580px){.home .homeContent .content .pdf a {
+    font-size: 1.4rem;
+    padding: .8rem 1rem;
+}}
